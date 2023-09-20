@@ -1,48 +1,40 @@
 class Rectangle():
-    # Create the constructor "__init__" method
-    # Arguments: width (an ingeter), height (an integer)
-    # 
-    # It sets an instance variable, "width" to the passed argument, width
-    # It sets an instance variable, "height" to the passed argument, height
 
-    # YOUR CODE HERE
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
+    def __str__(self):
+        return "A rectangle with width " + str(self.width) + " and height " + str(self.height)
 
+    
+    def verify_input(self):
+        if self.width > 0 and self.height > 0:
+            return True
+        else:
+            return False
+        
+    def area(self):
+        area = 0
 
-    # Create the "__str__" method
-    #
-    # It returns a string, 
-    #       "A rectangle with width ____ and height ____"
+        if self.width <= 0 or self.height <= 0:
+            return "Invalid input"
+        
+        else:
+            area = self.width * self.height
 
-    # YOUR CODE HERE
+        return area
 
+    def perimeter(self):
+       perimeter = 0
+       
+       if self.width <= 0 or self.height <= 0:
+            return "Invalid input"
+            
+       else:
+           perimeter = (self.height * 2) + (self.width * 2)
 
-
-    # Create the "verify_input" method
-    #
-    # It returns a boolean
-    #       True if the width and height are positive numbers
-    #       False otherwise
-
-    # YOUR CODE HERE
-
-
-
-    # Create the "area" method
-    #
-    # It first verifies inputs and return "Invalid input" if they are invalid.
-    # Otherwise, it returns the area of the rectangle.
-
-    # YOUR CODE HERE
-
-
-
-    # Create the "perimeter" method
-    #
-    # It first verifies inputs and return "Invalid input" if they are invalid.
-    # Otherwise, it returns the perimeter of the rectangle.
-
-    # YOUR CODE HERE
+       return perimeter
     
 
 
